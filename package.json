@@ -11,15 +11,22 @@
     "postinstall": "npx husky init"
   },
   "dependencies": {
+    "@floating-ui/react": "^0.26.9",
+    "@headlessui/react": "^1.7.18",
     "clsx": "^2.1.0",
+    "jotai": "^2.7.0",
     "next": "14.1.0",
     "next-themes": "^0.2.1",
     "react": "^18",
     "react-dom": "^18",
+    "react-icons": "^5.0.1",
     "react-use": "^17.5.0",
+    "rizzui": "^0.8.4",
+    "simplebar-react": "^3.2.4",
     "tailwind-merge": "^2.2.1"
   },
   "devDependencies": {
+    "@tailwindcss/forms": "^0.5.7",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",

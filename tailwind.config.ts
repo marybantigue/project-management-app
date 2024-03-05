@@ -1,6 +1,4 @@
 import type { Config } from 'tailwindcss'
-/** @type {import('tailwindcss').Config} */
-const colors = require('tailwindcss/colors')
 
 const config: Config = {
   darkMode: ['class', '[data-theme="dark"]'],
@@ -9,78 +7,72 @@ const config: Config = {
     './node_modules/rizzui/dist/*.{js,ts,jsx,tsx}' // ⚠️ Required this line to compile RizzUI style.
   ],
   theme: {
+    screens: {
+      xs: '480px',
+      sm: '640px',
+      md: '768px',
+      lg: '1024px',
+      xl: '1280px',
+      '2xl': '1536px',
+      '3xl': '1920px',
+      '4xl': '2560px' // only need to control product grid mode in ultra 4k device
+    },
     extend: {
       colors: {
-        /*
-         * body, modal, drawer background & ring-offset-color
-         */
-        background: colors.white,
-
-        /*
-         * body text color
-         */
-        foreground: colors.gray[600],
-
-        /*
-         * border, default flat bg color for input components, tab & dropdown hover color
-         */
-        muted: colors.gray[200],
-
-        /*
-         * primary colors
-         */
+        gray: {
+          0: 'rgb(var(--gray-0) / <alpha-value>)',
+          50: 'rgb(var(--gray-50) / <alpha-value>)',
+          100: 'rgb(var(--gray-100) / <alpha-value>)',
+          200: 'rgb(var(--gray-200) / <alpha-value>)',
+          300: 'rgb(var(--gray-300) / <alpha-value>)',
+          400: 'rgb(var(--gray-400) / <alpha-value>)',
+          500: 'rgb(var(--gray-500) / <alpha-value>)',
+          600: 'rgb(var(--gray-600) / <alpha-value>)',
+          700: 'rgb(var(--gray-700) / <alpha-value>)',
+          800: 'rgb(var(--gray-800) / <alpha-value>)',
+          900: 'rgb(var(--gray-900) / <alpha-value>)',
+          1000: 'rgb(var(--gray-1000) / <alpha-value>)'
+        },
+        background: 'rgb(var(--background) / <alpha-value>)',
+        foreground: 'rgb(var(--foreground) / <alpha-value>)',
+        muted: 'rgb(var(--muted) / <alpha-value>)',
+        'muted-foreground': 'rgb(var(--muted-foreground) / <alpha-value>)',
         primary: {
-          lighter: colors.gray[200],
-          DEFAULT: colors.gray[800],
-          dark: colors.gray[950],
-          foreground: colors.white
+          lighter: 'rgb(var(--primary-lighter) / <alpha-value>)',
+          DEFAULT: 'rgb(var(--primary-default) / <alpha-value>)',
+          dark: 'rgb(var(--primary-dark) / <alpha-value>)',
+          foreground: 'rgb(var(--primary-foreground) / <alpha-value>)'
         },
-
-        /*
-         * secondary colors
-         */
         secondary: {
-          lighter: colors.indigo[200],
-          DEFAULT: colors.indigo[500],
-          dark: colors.indigo[700],
-          foreground: colors.white
+          lighter: 'rgb(var(--secondary-lighter) / <alpha-value>)',
+          DEFAULT: 'rgb(var(--secondary-default) / <alpha-value>)',
+          dark: 'rgb(var(--secondary-dark) / <alpha-value>)',
+          foreground: 'rgb(var(--secondary-foreground) / <alpha-value>)'
         },
-
-        /*
-         * danger colors
-         */
         red: {
-          lighter: colors.rose[200],
-          DEFAULT: colors.rose[500],
-          dark: colors.rose[700]
+          lighter: 'rgb(var(--red-lighter) / <alpha-value>)',
+          DEFAULT: 'rgb(var(--red-default) / <alpha-value>)',
+          dark: 'rgb(var(--red-dark) / <alpha-value>)'
         },
-
-        /*
-         * warning colors
-         */
         orange: {
-          lighter: colors.amber[200],
-          DEFAULT: colors.amber[500],
-          dark: colors.amber[700]
+          lighter: 'rgb(var(--orange-lighter) / <alpha-value>)',
+          DEFAULT: 'rgb(var(--orange-default) / <alpha-value>)',
+          dark: 'rgb(var(--orange-dark) / <alpha-value>)'
         },
-
-        /*
-         * info colors
-         */
         blue: {
-          lighter: colors.sky[200],
-          DEFAULT: colors.sky[500],
-          dark: colors.sky[700]
+          lighter: 'rgb(var(--blue-lighter) / <alpha-value>)',
+          DEFAULT: 'rgb(var(--blue-default) / <alpha-value>)',
+          dark: 'rgb(var(--blue-dark) / <alpha-value>)'
         },
-
-        /*
-         * success colors
-         */
         green: {
-          lighter: colors.emerald[200],
-          DEFAULT: colors.emerald[500],
-          dark: colors.emerald[700]
+          lighter: 'rgb(var(--green-lighter) / <alpha-value>)',
+          DEFAULT: 'rgb(var(--green-default) / <alpha-value>)',
+          dark: 'rgb(var(--green-dark) / <alpha-value>)'
         }
+      },
+      fontFamily: {
+        inter: ['var(--font-inter)'],
+        lexend: ['var(--font-lexend)']
       }
     }
   },

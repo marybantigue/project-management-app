@@ -25,6 +25,16 @@ export const menuItems: MenuItem = {
     name: 'Projects',
     icon: 'calendar',
     href: routes.projects
+  },
+  tasks: {
+    name: 'Tasks',
+    icon: 'calendar',
+    href: routes.tasks
+  },
+  kanban: {
+    name: 'Kanban Board',
+    icon: 'calendar',
+    href: routes.kanban
   }
 }
 

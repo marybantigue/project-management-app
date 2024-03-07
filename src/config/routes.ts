@@ -2,6 +2,8 @@ export const routes = {
   home: '/',
   dashboard: '/',
   projects: '/projects',
+  tasks: '/tasks',
+  kanban: '/kanban',
   comingSoon: '/coming-soon',
   accessDenied: '/access-denied',
   notFound: '/not-found',

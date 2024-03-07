@@ -4,9 +4,7 @@ export default function MainLayout({ children }: { children: React.ReactNode }) 
     <main className='flex min-h-screen flex-grow'>
       <div className='flex w-full flex-col '>
         <Header />
-        <div className='relative h-full flex flex-auto flex-col px-4 sm:px-6 md:px-8 py-4 sm:py-6 md:px-8 container mx-auto'>
-          {children}
-        </div>
+        <div className='relative h-full flex flex-auto flex-col container mx-auto p-4 sm:p-6 md:p-8'>{children}</div>
       </div>
     </main>
   )
